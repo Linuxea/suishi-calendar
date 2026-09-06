@@ -17,7 +17,7 @@
   - `repeat.ts` 重复规则展开，`lunar-yearly` 为核心差异化（农历生日）
 - lunar-typescript 注意事项：`Lunar.fromYmd` 对不存在的农历日（如廿九月的三十）会抛错，一律用 `Lunar.fromDate`；`getMonthInChinese()` 自带「闰」前缀；闰月 `getMonth()` 返回负数；`getOtherFestivals()` 是冷门条目噪声，不要用
 - `src/store.ts` zustand 全局状态；`src/lib/storage.ts` 带版本号的 localStorage schema（key 前缀 `suishi.`），改 schema 需兼容旧数据
-- 部署到子路径时改 `vite.config.ts` 的 `base`（当前 `/`）
+- **已部署**：自有服务器 `/calendar/` 子路径（http://SERVER_IP/calendar/），`vite.config.ts` 的 `base` 必须保持 `'/calendar/'`。更新流程：`npm run build` → `rsync dist/ SERVER_WEBROOT`。nginx `/calendar/` location 在服务器 `NGINX_CONF`（改前备份 `nginx-conf-backup`）
 
 ## 已锁定决策
 
