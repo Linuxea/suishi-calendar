@@ -40,16 +40,14 @@ npm run preview  # 预览构建产物
 
 ## 部署
 
-已部署在自有服务器服务器 **http://SERVER_IP/calendar/**。
-
-更新流程：
+纯静态构建，`dist/` 可部署到任意静态服务器或子路径（本项目部署在自有服务器的 `/calendar/` 子路径，服务器信息只记录在本地文档，不入库）。
 
 ```bash
 npm run build
-rsync dist/ SERVER_WEBROOT
+# 然后将 dist/ 同步到服务器站点目录
 ```
 
-`vite.config.ts` 的 `base` 必须保持 `'/calendar/'`；nginx 配置在服务器 `NGINX_CONF`。
+部署到子路径时，`vite.config.ts` 的 `base` 必须与子路径一致（当前 `'/calendar/'`）。
 
 ## 设计
 
