@@ -1,6 +1,6 @@
 # 岁时（suishi-calendar）项目约定
 
-中国风个人 Web 日历。Vite + React 19 + TypeScript，纯前端无后端，npm 管理依赖。远程仓库：`git@github.com:Linuxea/suisui-calendar.git`。
+中国风个人 Web 日历。Vite + React 19 + TypeScript，纯前端无后端，npm 管理依赖。远程仓库：`git@github.com:Linuxea/suishi-calendar.git`。
 
 ## 常用命令
 
